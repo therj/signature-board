@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-const URL = 'http://localhost:8000/api/messages'
+const URL = process.env.URL || 'http://localhost:8000/api/messages'
 
 class Form extends Component {
   constructor() {
@@ -47,8 +47,8 @@ class Form extends Component {
       <div className="guestbookDiv">
         <form onSubmit={this.addToMessageBoard} className="guestBookForm">
           <label htmlFor="" className="guestlabel">
-            What 's your name?
-          </label>
+            What 's your name?{' '}
+          </label>{' '}
           <input
             type="text"
             name="name"
@@ -58,24 +58,24 @@ class Form extends Component {
           />
           <label className="guestlabel" htmlFor="">
             Leave a nice message:
-          </label>
+          </label>{' '}
           <textarea
             className="MessageinputForm"
             type="text"
             name="message"
             value={this.state.message}
             onChange={this.handleChange}
-          />
+          />{' '}
           <div className="Submit">
             <button
               type="submit"
               value="Submit"
               className="submitbuttonguestbook"
             >
-              Submit Message
-            </button>
-          </div>
-        </form>
+              Submit Message{' '}
+            </button>{' '}
+          </div>{' '}
+        </form>{' '}
       </div>
     )
   }
