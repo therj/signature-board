@@ -20,6 +20,7 @@ class MessageBoard extends Component {
   }
   componentDidMount = () => {
     // console.log('Mounted!')
+    console.log(URL)
     fetch(URL)
       .then((res) => res.json())
       .then((res) => {
