@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// const URL = 'https://signature-board-api.herokuapp.com/api/messages'
 const URL = 'http://localhost:8000/api/messages'
 
 class MessageBoard extends Component {
