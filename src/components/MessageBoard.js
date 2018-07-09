@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-const URL = process.env.URL || 'http://localhost:8000/api/messages'
+const URL = process.env.URL
 
 class MessageBoard extends Component {
   constructor() {
